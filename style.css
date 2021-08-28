@@ -150,6 +150,10 @@ Global classes
   width: 100%;
   animation: nav-load 1s ease-in;
   z-index: 100;
+  transition: var(--transition);
+}
+.nav-scrolled {
+  background: rgba(0, 0, 0, 0.7);
 }
 /* .nav-fixed {
   position: fixed;
@@ -217,8 +221,11 @@ Global classes
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent;
     z-index: 100;
+  }
+  .nav-scrolled {
+    background-color: rgba(0, 0, 0, 0.7);
   }
   .nav-bar {
     display: none;
@@ -455,7 +462,7 @@ Global classes
 }
 .project:hover {
   box-shadow: var(--dark-shadow);
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 .project-info p {
   font-size: 0.875rem;
