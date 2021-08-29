@@ -170,17 +170,19 @@ Global classes
   }
 } */
 .nav-links {
-  background: #333;
+  background: rgba(0, 0, 0, 0.9);
   transition: var(--transition);
-  transform: translateX(-100%);
+  transform: translateX(250%);
   /* display: none; */
   /* height: 0; */
   /* overflow: hidden; */
   padding: 2rem 0 2rem 2rem;
   z-index: 200 !important;
+  width: 200px;
+  height: 100%;
 }
 .show-nav {
-  transform: translateX(0);
+  transform: translateX(180%);
 }
 .nav-link {
   transition: var(--transition);
