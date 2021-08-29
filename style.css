@@ -170,19 +170,28 @@ Global classes
   }
 } */
 .nav-links {
-  background: rgba(0, 0, 0, 0.9);
+  background: #333;
   transition: var(--transition);
-  transform: translateX(250%);
+  /* transform: translateX(-100%); */
   /* display: none; */
   /* height: 0; */
   /* overflow: hidden; */
   padding: 2rem 0 2rem 2rem;
   z-index: 200 !important;
-  width: 200px;
-  height: 100%;
+  /* width: inherit; */
+}
+@media screen and (max-width: 678px) {
+  .nav-links {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    width: 20rem;
+    transform: translateX(100%);
+  }
 }
 .show-nav {
-  transform: translateX(180%);
+  transform: translateX(50%);
 }
 .nav-link {
   transition: var(--transition);
