@@ -13,8 +13,10 @@ const scrollLinks = document.querySelectorAll(".scroll-link");
 navBar.addEventListener("click", function () {
   if (navLinks.classList.contains("show-nav")) {
     navLinks.classList.remove("show-nav");
+    navBar.innerHTML = `<i class="fas fa-bars"></i>`;
   } else {
     navLinks.classList.add("show-nav");
+    navBar.innerHTML = `<i class="fas fa-times"></i>`;
   }
 });
 
@@ -22,6 +24,7 @@ scrollLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
     e.preventDefault();
     navLinks.classList.remove("show-nav");
+    navBar.innerHTML = `<i class="fas fa-bars"></i>`;
     const id = e.currentTarget.getAttribute("href").slice(1);
     const element = document.getElementById(id);
     console.log(element);
