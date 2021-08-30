@@ -448,10 +448,10 @@ Global classes
   .about-section {
     margin-bottom: 15rem;
   }
-@media screen and (max-width: 320px) {
+  /* @media screen and (max-width: 320px) {
   .about-section {
     margin-bottom: 20rem;
-  }
+  } */
 }
 
 /* projects */
