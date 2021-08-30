@@ -9,6 +9,7 @@ const navBar = document.querySelector(".nav-bar");
 const nav = document.querySelector(".nav");
 const sections = document.querySelectorAll("section");
 const scrollLinks = document.querySelectorAll(".scroll-link");
+const scrolls = document.querySelectorAll(".scroll");
 
 navBar.addEventListener("click", function () {
   if (navLinks.classList.contains("show-nav")) {
@@ -27,9 +28,9 @@ scrollLinks.forEach(function (link) {
     navBar.innerHTML = `<i class="fas fa-bars"></i>`;
     const id = e.currentTarget.getAttribute("href").slice(1);
     const element = document.getElementById(id);
-    console.log(element);
+    // console.log(element);
     let position = element.offsetTop - 64;
-    console.log(position);
+    // console.log(position);
     window.scrollTo({
       left: 0,
       top: position,
@@ -38,16 +39,25 @@ scrollLinks.forEach(function (link) {
   });
 });
 
-// window.addEventListener("scroll", function () {
-//   const windowHeight = this.window.pageYOffset;
-//   if (windowHeight > 720) {
-//     nav.style.backgroundColor = "rgba(0,0,0,0.7)";
-//     nav.style.transition = "all , 0.4s ease-in";
-//   } else {
-//     nav.style.backgroundColor = "transparent";
-//   }
+window.addEventListener("scroll", function () {
+  // console.log(pageYOffset);
 
-// });
+  let current = "";
+  scrolls.forEach((scroll) => {
+    let sectionTop = scroll.offsetTop;
+    let sectionHeight = scroll.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 4) {
+      current = scroll.getAttribute("id");
+    }
+  });
+  navLink.forEach((link) => {
+    link.classList.remove("active");
+    if (link.classList.contains(current)) {
+      link.classList.add("active");
+    }
+  });
+  console.log(current);
+});
 
 navLinks.addEventListener("click", function (e) {
   const id = e.target.dataset.id;
