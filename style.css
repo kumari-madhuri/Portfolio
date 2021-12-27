@@ -403,7 +403,7 @@ Global classes
 }
 .about-skills {
   margin-top: 3rem;
-  max-width: 23rem;
+  /* max-width: 23rem; */
 }
 .skill {
   background: #eee;
@@ -413,7 +413,7 @@ Global classes
   padding: 0.7rem 1rem;
   margin-right: 0.5rem;
   margin-bottom: 0.7rem;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .skill h4 {
   margin-bottom: 0;
